@@ -1,0 +1,6 @@
+    virtualenv env
+    . env/bin/activate
+    pip install imposm.parser
+    ./osm2geojson.py
+    #import data into couchdb
+    #./osm2geojson2.py
