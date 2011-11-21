@@ -4,3 +4,6 @@
     ./osm2geojson.py
     #import data into couchdb
     #./osm2geojson2.py
+    curl -X PUT http://127.0.0.1:5984/osm
+    curl -X PUT -d '{"spatial":{"points":"function(doc) {if (doc.geometry){emit(doc.geometry, [doc._id, doc.geometry]);}};"}}' http://127.0.0.1:5984/osm/_design/main'""}}'
+
